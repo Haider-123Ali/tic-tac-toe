@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css"><style>
+        @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+        </style>
+</head>
+<body>
+    <nav class="header">
+        <div>
+<h1 style="font-family: 'Sawarabi Gothic', sans-serif;">Tic Tac Toe</h1>
+</div>
+    </nav>
+<div class="gameContainer">
+    <div class="container">
+        <div class="box" id="1"></div>
+           <div class="box"id="2"></div>
+           <div  style="border-right: none;" class="box"id="3"></div>
+           <div class="box"id="4"></div>
+           <div  class="box"id="5"></div>
+           <div  style="border-right: none;"class="box"id="6"></div>
+           <div style="border-bottom: none;" class="box"id="7"></div>
+           <div style="border-bottom: none;" class="box"id="8"></div>
+           <div  style="border-right: none; border-bottom: none;"  class="box"id="9"></div>
+    </div>
+    <div class="gameInfo">
+        <h2 style="color:black;">Welcome to Tic Tac Toe</h2> 
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <p id="info"></p>
+            <button class="btn">Reset</button>
+        </div> <br>
+        <div class="image">
+            <img src="data:image/png;base64,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" alt=""></div>
+    </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
